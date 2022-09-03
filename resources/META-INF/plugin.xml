@@ -1,0 +1,36 @@
+<idea-plugin>
+  <id>honghuan0921</id>
+  <name>jarvis mapper跳转</name>
+  <version>1.0</version>
+  <vendor email="honghuan0921@gmail.com" url="https://github.com/LiuHonghuan">honghuan</vendor>
+
+  <description><![CDATA[
+      鼠标选中字符串后，windows按Alt+B进行跳转，mac按shift+command+B跳转 .<br>
+      <em>v1.0版本只支持java跳转xml</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      v1.0版本.<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="honghuan0921" class="JarvisIdeaAction" text="跳转xml" description="mapper跳转xml">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift meta B" second-keystroke="shift meta 0"/>
+    </action>
+  </actions>
+
+</idea-plugin>
